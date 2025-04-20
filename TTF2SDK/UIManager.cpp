@@ -86,7 +86,7 @@ void UIManager::InitImGui(const fs::path& modsPath, ID3D11Device** ppD3DDevice)
     fs::path fontPath = modsPath / "Icepick.Framework/fonts/NotoSans-Medium.ttf";
     if (fs::exists(fontPath))
     {
-        ImGui::GetIO().Fonts->AddFontFromFileTTF(fontPath.string().c_str(), 16.0f);
+        ImGui::GetIO().Fonts->AddFontFromFileTTF(fontPath.string().c_str(), 13.0f, NULL, ImGui::GetIO().Fonts->GetGlyphRangesChineseFull());
     }
 }
 
